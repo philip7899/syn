@@ -14,6 +14,7 @@ gem "multi_xml", "~> 0.5.5"
 
 #User Functionality
 gem 'devise'
+gem "cancan"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

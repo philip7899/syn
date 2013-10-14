@@ -19,3 +19,35 @@ body {
 .thumbnails li{
 	margin-right: 50px;
 }
+
+.stolen-surfbox{
+	box-shadow: 2px -2px 2px 2px rgba(36, 32, 33, 0.5);
+	background-color: rgba(36, 32, 33, 0.5);
+	padding: 1%;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 400px;
+}
+
+.my-wrapper,
+.my-wrapper h1,
+.my-wrapper h2, 
+.my-wrapper h3, 
+.my-wrapper p {
+	color:white;
+}
+
+.custom-font-1 {
+	color: white;
+	font-family: Helvetica Neue Light,Helvetica Neue,Helvetica,san-serif;
+	font-weight: 650;
+	font-size: 70px;
+}
+
+.black-font-1 {
+	color: black;
+	font-family: Helvetica Neue Light,Helvetica Neue,Helvetica,san-serif;
+	font-weight: 650;
+	font-size: 70px;
+}

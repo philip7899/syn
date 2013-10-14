@@ -22,8 +22,14 @@
 <!-- Be sure to leave the brand out there if you want it shown -->
 <a class="brand" href="#">Syn</a>
  <ul class="nav pull-right">
- 	<li><%= link_to "Sign up", "#" %></li>
- 	<li><%= link_to "Login", "#" %></li>
+ 	<% if !user_signed_in? %>
+ 		<li><%= link_to "Sign up", new_user_registration_path %></li>
+	 	<li><%= link_to "Login", new_user_session_path %></li>
+ 	<% else %>
+ 	 	<li><%= link_to "Students", student_path %></li>
+ 		<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+ 	<% end %>
+ 	
  </ul>
 <!-- Everything you want hidden at 940px or less, place within here -->
 <div class="nav-collapse collapse">
@@ -33,14 +39,16 @@
 </div>
 </div>
 </div>
-
-<% if notice.present? %>
-	<p class="notice"><%= notice %></p>
-<% end %>
-<% if alert.present? %>
-	<p class="alert"><%= alert %></p>
-<% end %>
-
+<div class="container">
+	<div class="span12">
+		<% if notice.present? %>
+			<div class="alert alert-success"><p class="notice"><%= notice %></p></div>
+		<% end %>
+		<% if alert.present? %>
+			<div class=""><p class="alert"><%= alert %></p></div> <!--I changed it from class=alert alert-error !-->
+		<% end %>
+	</div>
+</div>
 <%= yield %>
 
 </body>
