@@ -10,6 +10,7 @@
 				    <%= f.input :email, :required => true, :autofocus => true %>
 				    <%= f.input :password, :required => true %>
 				    <%= f.input :password_confirmation, :required => true %>
+				    <%= f.collection_radio_buttons :role, [['brown', 'Brown Student'] ,['risd', 'RISD Student']], :first, :last %>
 				  </div>
 
 				 
