@@ -26,9 +26,9 @@
  		<li><%= link_to "Sign up", new_user_registration_path %></li>
 	 	<li><%= link_to "Login", new_user_session_path %></li>
  	<% else %>
- 		<% if can? :student, :static_pages %>
+ 		<%# if can? :index, :static_pages I don't think it knows what this is. %> #
  	 		<li><%= link_to "Students", student_path %></li>
- 	 	<% end %>
+ 	 	<%# end %>
  		<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
  	<% end %>
  	

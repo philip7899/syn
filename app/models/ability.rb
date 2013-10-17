@@ -4,12 +4,12 @@
       def initialize(user)
         # Define abilities for the passed in user here. For example:
         #
-        user ||= User.new # guest user (not logged in)
-           if user.role == 'brown'
-             can :student, :static_pages
+        #user ||= User.new # guest user (not logged in)
+          # if user.role == 'brown'
+            # can :index, :static_pages #I don't think it actually knows what static_pages is here.
           # else
            #  can :read, :all
-           end
+          # end
         #
         # The first argument to `can` is the action you are giving the user 
         # permission to do.

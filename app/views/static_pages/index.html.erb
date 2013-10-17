@@ -1,73 +1,32 @@
 
 <div class="container">
 	<div class="span12">
+		<% if current_user.brown? %>
+			<h3>RISD Students</h3>
+		<% else %>
+			<h3>Brown Students</h3>
+		<% end %>
+	<ul class="thumbnails" style="margin-top: 10px; margin-left: auto; margin-right: auto;" >
+		<div class="row">
 
-
-
+			<% @users.each do |user| %>
+					
+					  <li class="span3">
+						    <div class="thumbnail" style="background: white;">
+						      <%= image_tag "idea.jpeg" %>
+						      <h3><%= user.role %></h3>
+						      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						      <a class="btn btn-primary">View</a>
+						    </div>
+					  </li>
+			<% end %>
 
 		
-			<ul class="thumbnails" style="margin-top: 10px; margin-left: auto; margin-right: auto;" >
-				<div class="row">
-				  <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
+			
 
-				  <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
+		</div>
 
-				    <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
-				</div>
-
-
-
-				<div class="row" style="margin-top: 10px;">
-				  <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
-
-				  <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
-
-				    <li class="span3">
-					    <div class="thumbnail" style="background: white;">
-					      <%= image_tag "idea.jpeg" %>
-					      <h3>Thumbnail label</h3>
-					      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-					      <a class="btn btn-primary">View</a>
-					    </div>
-				  </li>
-				</div>
-
-
+		
 			</ul>
 
 
