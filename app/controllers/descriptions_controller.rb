@@ -23,8 +23,8 @@
 			end
 
 			def update
-				flash[:success] = "You have succesfully updated your info"
 				description = current_user.description.update_attributes(description_params)
+				flash[:success] = "You have succesfully updated your info"
 				redirect_to student_path
 			end
 

@@ -1,9 +1,6 @@
 body { 
-	background: url('idea.jpeg') no-repeat center center fixed;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+	background-color: lightblue;
+
  }
 
  .box{
@@ -17,7 +14,7 @@ body {
 }
 
 .thumbnails li{
-	margin-right: 50px;
+	margin-right: 0px;
 }
 
 .stolen-surfbox{
@@ -27,7 +24,7 @@ body {
 	margin-top: 50px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 400px;
+	width: 500px;
 }
 
 .my-wrapper,

@@ -6,20 +6,33 @@
 		<% else %>
 			<h3>Brown Students</h3>
 		<% end %>
-	<ul class="thumbnails" style="margin-top: 10px; margin-left: auto; margin-right: auto;" >
+	<ul class="thumbnails" style="margin-top: 10px; margin-bottom: 10px; margin-left: auto; margin-right: auto;" >
 		<div class="row"> <div class="rowbottom">
 
 	<% @users.each do |user| %>
-			
-			  <li class="span3">
-				    <div class="thumbnail" style="background: white;">
+			<%if user.description %>
+			  <li class="span4">
+				    <div class="thumbnail" style="background: white; height: 450px; margin-bottom: 10px;">
 				      <%= image_tag "idea.jpeg" %>
-				      <h3><%= user.email %></h3>
-				      <%= user.description.looking_for %>
-				      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-				      <a class="btn btn-primary">View</a>
+				      <h3><center><%= user.email %></center></h3>
+				      <h4>My skills: </h2><p style="height: 20px; overflow: scroll;"><%= user.description.skills %></p>
+				      <h4>Looking for: </h2><p style="height: 20px; overflow: scroll;"><%= user.description.looking_for %></p>
+				      <h4>My Idea: </h2><p style="height: 50px; overflow-y: scroll;"><%= user.description.my_idea %></p>
+
 				    </div>
 			  </li>
+			 <% else %>
+
+			 	<li class="span4">
+				    <div class="thumbnail" style="background: white; height: 450px; ">
+				      <%= image_tag "idea.jpeg" %>
+				      <h3><center><%= user.email %></center></h3>
+				      
+
+				    </div>
+			  	</li>
+			 <% end %>
+
 	<% end %>
 
 		

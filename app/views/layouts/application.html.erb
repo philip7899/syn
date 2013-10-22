@@ -44,12 +44,9 @@
 </div>
 <div class="container">
 	<div class="span12">
-		<% if notice.present? %>
-			<div class="alert alert-success"><p class="notice"><%= notice %></p></div>
-		<% end %>
-		<% if alert.present? %>
-			<div class=""><p class="alert"><%= alert %></p></div> <!--I changed it from class=alert alert-error !-->
-		<% end %>
+	  <% flash.each do |key, value| %>
+         <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 	</div>
 </div>
 <%= yield %>
