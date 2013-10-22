@@ -28,6 +28,7 @@
  	<% else %>
  		<%# if can? :index, :static_pages I don't think it knows what this is. %> #
  	 		<li><%= link_to "Students", student_path %></li>
+ 	 		<li><%= link_to "My information", new_description_path %>
  	 	<%# end %>
  		<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
  	<% end %>

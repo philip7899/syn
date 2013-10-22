@@ -6,7 +6,7 @@
 		<% else %>
 			<h3>Brown Students</h3>
 		<% end %>
-	<ul class="thumbnails" style="margin-top: 10px; margin-left: auto; margin-right: auto; margin-bottom: 100px;" >
+	<ul class="thumbnails" style="margin-top: 10px; margin-left: auto; margin-right: auto;" >
 		<div class="row"> <div class="rowbottom">
 
 	<% @users.each do |user| %>
@@ -15,6 +15,7 @@
 				    <div class="thumbnail" style="background: white;">
 				      <%= image_tag "idea.jpeg" %>
 				      <h3><%= user.email %></h3>
+				      <%= user.description.looking_for %>
 				      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 				      <a class="btn btn-primary">View</a>
 				    </div>

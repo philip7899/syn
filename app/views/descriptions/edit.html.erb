@@ -1,0 +1,13 @@
+
+	<div class="span6 offset3 text-center">
+	<h1>Edit your information</h1>
+
+		<%= simple_form_for @description do |f| %>
+			<%= f.input :skills %>
+			<%= f.input :looking_for, :label => 'What help do you need?' %>
+			<%= f.input :my_idea %>
+			<%= f.submit "Save", :class => "btn btn-primary btn-large" %>
+		<% end %>
+	</div>
+
+ 
